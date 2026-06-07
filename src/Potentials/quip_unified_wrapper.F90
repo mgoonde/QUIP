@@ -110,9 +110,9 @@ subroutine quip_unified_wrapper(N,pos,frac_pos,lattice,symbol,Z, &
      call system_initialise(verbosity=PRINT_SILENT,mainlog_unit=output_unit)
      call Initialise(mpi_glob,communicator=mpi_communicator)
      call Potential_Filename_Initialise(pot, args_str=trim(init_args_str), param_filename=quip_param_file,mpi_obj=mpi_glob)
-     call verbosity_push(PRINT_NORMAL)
-     call Print(pot)
-     call verbosity_pop()
+     ! call verbosity_push(PRINT_NORMAL)
+     ! call Print(pot)
+     ! call verbosity_pop()
      call initialise(at,N,use_lattice)
   end if
 
